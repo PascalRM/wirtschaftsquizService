@@ -15,7 +15,7 @@ class KategoriesTableSeeder extends Seeder
     {
         for ($i = 0; $i < 5; $i++) {
             Kategorie::create([
-                'kategorie' => "Kategorie"+$i,
+                'kategorie' => "Kategorie".$i,
                 'id_user' => $i,
             ]);
         }
