@@ -13,7 +13,7 @@ class KategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Factory::create();
+        $faker = \Faker\Factory::create();
         for ($i=0;$i<6;$i++){
             kategorie::create([
                 'kategorie'=>$faker->name,
