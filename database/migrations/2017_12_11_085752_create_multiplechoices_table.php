@@ -15,6 +15,10 @@ class CreateMultiplechoicesTable extends Migration
     {
         Schema::create('multiplechoices', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('antwort');
+            $table->string('falscheantwort1');
+            $table->string('falscheantwort2');
+            $table->string('falscheantwort3');
             $table->timestamps();
         });
     }

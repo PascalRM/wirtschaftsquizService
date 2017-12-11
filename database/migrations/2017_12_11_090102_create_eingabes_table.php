@@ -15,6 +15,7 @@ class CreateEingabesTable extends Migration
     {
         Schema::create('eingabes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('antwort');
             $table->timestamps();
         });
     }

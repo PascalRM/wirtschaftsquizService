@@ -15,6 +15,7 @@ class CreateTruefalsesTable extends Migration
     {
         Schema::create('truefalses', function (Blueprint $table) {
             $table->increments('id');
+            $table->boolean('antwort');
             $table->timestamps();
         });
     }
