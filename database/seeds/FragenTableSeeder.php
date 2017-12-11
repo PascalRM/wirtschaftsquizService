@@ -30,11 +30,16 @@ class FragenTableSeeder extends Seeder
                     'id_fragebogen' => 1,
                 ]);
             }
+            for($j = 0; $j<3; $j++){
+                
+            Truefalse::create([
+                'antwort' => 'antwort'.j,
+            ]);
+            }
+           
         }
 
-        Frage::create([
-            'frage' => 'frage',
-        ]);
+
 
         for ($i = 0; $i < 5; $i++) {
             Kategorie::create([
