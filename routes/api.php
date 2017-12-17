@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Frage;
+use App\Fragebogen;
+use App\Eingabe;
+use App\Truefalse;
+use App\Multiplechoice;
+use App\Kategorie;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +22,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/*
+ *--------------------------------------------------------------------------
+ * Kategorie
+ *--------------------------------------------------------------------------
+ */
+
+Route::get('kategorie', 'KategorieController@index');
+Route::get('kategorie/{id}', 'KategorieController@show');
+Route::post('kategorie', 'KategorieController@store');
+Route::put('kategorie/{id}', 'KategorieController@update');
+Route::delete('kategorie/{id}', 'KategorieController@delete');
