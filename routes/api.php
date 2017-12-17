@@ -40,19 +40,19 @@ Route::delete('kategorie/{id}', 'KategorieController@delete');
  * Fragebogen
  *--------------------------------------------------------------------------
  */
-Route::get('fragebogen', 'KategorieController@index');
-Route::get('fragebogen/{id}', 'KategorieController@show');
-Route::post('fragebogen', 'KategorieController@store');
-Route::put('fragebogen/{id}', 'KategorieController@update');
-Route::delete('fragebogen/{id}', 'KategorieController@delete');
+Route::get('fragebogen', 'FragebogenController@index');
+Route::get('fragebogen/{id}', 'FragebogenController@show');
+Route::post('fragebogen', 'FragebogenController@store');
+Route::put('fragebogen/{id}', 'FragebogenController@update');
+Route::delete('fragebogen/{id}', 'FragebogenController@delete');
 
 /*
  *--------------------------------------------------------------------------
  * Fragebogen
  *--------------------------------------------------------------------------
  */
-Route::get('frage', 'KategorieController@index');
-Route::get('frage/{id}', 'KategorieController@show');
-Route::post('frage', 'KategorieController@store');
-Route::put('frage/{id}', 'KategorieController@update');
-Route::delete('frage/{id}', 'KategorieController@delete');
+Route::get('frage', 'FrageController@index');
+Route::get('frage/{id}', 'FrageController@show');
+Route::post('frage', 'FrageController@store');
+Route::put('frage/{id}', 'FrageController@update');
+Route::delete('frage/{id}', 'FrageController@delete');
