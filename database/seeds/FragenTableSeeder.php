@@ -34,12 +34,20 @@ class FragenTableSeeder extends Seeder
             }
             for($j = 0; $j<3; $j++) {
                 Truefalse::create([
-                    'antwort' => 'antwort'.$j,
+                    'antwort' => true,
                 ]);
             }
             for($j = 0; $j<3; $j++) {
-                Truefalse::create([
-                    'antwort' => 'antwort'.$j,
+                Multiplechoice::create([
+                    'antwort' => 'richtige antwort',
+                    'falscheantwort1' => 'falsche antwort',
+                    'falscheantwort2' => 'falsche antwort',
+                    'falscheantwort3' => 'flasche antwort',
+                ]);
+            }
+            for($j = 0; $j<3; $j++) {
+                Eingabe::create([
+                    'antwort' => 'richtige antwort',
                 ]);
             }
         }
