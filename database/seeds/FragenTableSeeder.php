@@ -17,7 +17,9 @@ class FragenTableSeeder extends Seeder
     public function run()
     {
         Fragebogen::create([
-            'name' => 'Fragebogen1'
+            'name' => 'Fragebogen1',
+            'id_kategorie' => 1,
+            'id_user' => 1,
         ]);
 
 
