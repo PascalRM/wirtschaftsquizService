@@ -48,7 +48,7 @@ Route::delete('fragebogen/{id}', 'FragebogenController@delete');
 
 /*
  *--------------------------------------------------------------------------
- * Fragebogen
+ * Frage
  *--------------------------------------------------------------------------
  */
 Route::get('frage', 'FrageController@index');
@@ -56,3 +56,37 @@ Route::get('frage/{id}', 'FrageController@show');
 Route::post('frage', 'FrageController@store');
 Route::put('frage/{id}', 'FrageController@update');
 Route::delete('frage/{id}', 'FrageController@delete');
+
+/*
+ *--------------------------------------------------------------------------
+ * Eingabe
+ *--------------------------------------------------------------------------
+ */
+Route::get('eingabe', 'FrageController@index');
+Route::get('eingabe/{id}', 'FrageController@show');
+Route::post('eingabe', 'FrageController@store');
+Route::put('eingabe/{id}', 'FrageController@update');
+Route::delete('eingabe/{id}', 'FrageController@delete');
+
+/*
+ *--------------------------------------------------------------------------
+ * Multiplechoice
+ *--------------------------------------------------------------------------
+ */
+Route::get('multiplechoice', 'FrageController@index');
+Route::get('multiplechoice/{id}', 'FrageController@show');
+Route::post('multiplechoice', 'FrageController@store');
+Route::put('multiplechoice/{id}', 'FrageController@update');
+Route::delete('multiplechoice/{id}', 'FrageController@delete');
+
+/*
+ *--------------------------------------------------------------------------
+ * Truefalse
+ *--------------------------------------------------------------------------
+ */
+Route::get('truefalse', 'FrageController@index');
+Route::get('truefalse/{id}', 'FrageController@show');
+Route::post('truefalse', 'FrageController@store');
+Route::put('truefalse/{id}', 'FrageController@update');
+Route::delete('truefalse/{id}', 'FrageController@delete');
+
