@@ -92,7 +92,7 @@ Route::delete('truefalse/{id}', 'FrageController@delete');
 
 /*
  *--------------------------------------------------------------------------
- * Authentifizierung 
+ * Authentifizierung
  *--------------------------------------------------------------------------
  */
 Route::post('register', 'Auth\RegisterController@register');
