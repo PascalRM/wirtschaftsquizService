@@ -90,3 +90,9 @@ Route::post('truefalse', 'FrageController@store');
 Route::put('truefalse/{id}', 'FrageController@update');
 Route::delete('truefalse/{id}', 'FrageController@delete');
 
+/*
+ *--------------------------------------------------------------------------
+ * Register
+ *--------------------------------------------------------------------------
+ */
+Route::post('register', 'Auth\RegisterController@register');
