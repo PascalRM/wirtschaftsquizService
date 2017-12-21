@@ -11,11 +11,6 @@ class CreateAddAPITokensTable extends Migration
      *
      * @return void
      */
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
