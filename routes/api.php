@@ -7,6 +7,7 @@ use App\Eingabe;
 use App\Truefalse;
 use App\Multiplechoice;
 use App\Kategorie;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
