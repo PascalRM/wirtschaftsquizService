@@ -111,6 +111,10 @@ Route::group(['middleware' => 'auth:api'], function() {
  * Authentifizierung
  *--------------------------------------------------------------------------
  */
-Route::post('register', 'Auth\RegisterController@register');
-Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout');
+
+
+Route::group(['middleware' => 'cors'], function() {
+    Route::post('register', 'Auth\RegisterController@register');
+    Route::post('login', 'Auth\LoginController@login');
+    Route::post('logout', 'Auth\LoginController@logout');
+});
