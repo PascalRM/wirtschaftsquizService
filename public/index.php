@@ -7,7 +7,7 @@
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 define('LARAVEL_START', microtime(true));
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: http://localhost:4200");
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
