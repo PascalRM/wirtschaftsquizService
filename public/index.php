@@ -6,7 +6,6 @@
  * @package  Laravel
  * @author   Taylor Otwell <taylor@laravel.com>
  */
-header("Access-Control-Allow-Origin: http://localhost:4200");
 define('LARAVEL_START', microtime(true));
 
 /*
