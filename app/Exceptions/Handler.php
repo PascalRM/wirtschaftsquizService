@@ -54,4 +54,9 @@ class Handler extends ExceptionHandler
             ], 404);
         };
     }
+
+    protected function unauthenticated($request, AuthenticationException $exception)
+    {
+        return response()->json(['error' => 'Unauthenticated'], 401);
+    }
 }

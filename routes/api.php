@@ -32,9 +32,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('kategorie', 'KategorieController@index');
 Route::get('kategorie/{id}', 'KategorieController@show');
-Route::post('kategorie', 'KategorieController@store');
-Route::put('kategorie/{id}', 'KategorieController@update');
-Route::delete('kategorie/{id}', 'KategorieController@delete');
+
+Route::group(['middleware' => 'auth:api'], function() {
+    Route::post('kategorie', 'KategorieController@store');
+    Route::put('kategorie/{id}', 'KategorieController@update');
+    Route::delete('kategorie/{id}', 'KategorieController@delete');
+});
 
 /*
  *--------------------------------------------------------------------------
