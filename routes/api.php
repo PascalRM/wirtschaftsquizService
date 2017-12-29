@@ -46,9 +46,13 @@ Route::group(['middleware' => 'auth:api'], function() {
  */
 Route::get('fragebogen', 'FragebogenController@index');
 Route::get('fragebogen/{id}', 'FragebogenController@show');
-Route::post('fragebogen', 'FragebogenController@store');
-Route::put('fragebogen/{id}', 'FragebogenController@update');
-Route::delete('fragebogen/{id}', 'FragebogenController@delete');
+
+Route::group(['middleware' => 'auth:api'], function() {
+    Route::post('fragebogen', 'FragebogenController@store');
+    Route::put('fragebogen/{id}', 'FragebogenController@update');
+    Route::delete('fragebogen/{id}', 'FragebogenController@delete');
+});
+
 
 /*
  *--------------------------------------------------------------------------
@@ -57,10 +61,12 @@ Route::delete('fragebogen/{id}', 'FragebogenController@delete');
  */
 Route::get('frage', 'FrageController@index');
 Route::get('frage/{id}', 'FrageController@show');
-Route::post('frage', 'FrageController@store');
-Route::put('frage/{id}', 'FrageController@update');
-Route::delete('frage/{id}', 'FrageController@delete');
 
+Route::group(['middleware' => 'auth:api'], function() {
+    Route::post('frage', 'FrageController@store');
+    Route::put('frage/{id}', 'FrageController@update');
+    Route::delete('frage/{id}', 'FrageController@delete');
+});
 /*
  *--------------------------------------------------------------------------
  * Eingabe
@@ -68,10 +74,12 @@ Route::delete('frage/{id}', 'FrageController@delete');
  */
 Route::get('eingabe', 'FrageController@index');
 Route::get('eingabe/{id}', 'FrageController@show');
-Route::post('eingabe', 'FrageController@store');
-Route::put('eingabe/{id}', 'FrageController@update');
-Route::delete('eingabe/{id}', 'FrageController@delete');
 
+Route::group(['middleware' => 'auth:api'], function() {
+    Route::post('eingabe', 'FrageController@store');
+    Route::put('eingabe/{id}', 'FrageController@update');
+    Route::delete('eingabe/{id}', 'FrageController@delete');
+});
 /*
  *--------------------------------------------------------------------------
  * Multiplechoice
@@ -79,10 +87,12 @@ Route::delete('eingabe/{id}', 'FrageController@delete');
  */
 Route::get('multiplechoice', 'FrageController@index');
 Route::get('multiplechoice/{id}', 'FrageController@show');
-Route::post('multiplechoice', 'FrageController@store');
-Route::put('multiplechoice/{id}', 'FrageController@update');
-Route::delete('multiplechoice/{id}', 'FrageController@delete');
 
+Route::group(['middleware' => 'auth:api'], function() {
+    Route::post('multiplechoice', 'FrageController@store');
+    Route::put('multiplechoice/{id}', 'FrageController@update');
+    Route::delete('multiplechoice/{id}', 'FrageController@delete');
+});
 /*
  *--------------------------------------------------------------------------
  * Truefalse
@@ -90,10 +100,12 @@ Route::delete('multiplechoice/{id}', 'FrageController@delete');
  */
 Route::get('truefalse', 'FrageController@index');
 Route::get('truefalse/{id}', 'FrageController@show');
-Route::post('truefalse', 'FrageController@store');
-Route::put('truefalse/{id}', 'FrageController@update');
-Route::delete('truefalse/{id}', 'FrageController@delete');
 
+Route::group(['middleware' => 'auth:api'], function() {
+    Route::post('truefalse', 'FrageController@store');
+    Route::put('truefalse/{id}', 'FrageController@update');
+    Route::delete('truefalse/{id}', 'FrageController@delete');
+});
 /*
  *--------------------------------------------------------------------------
  * Authentifizierung
