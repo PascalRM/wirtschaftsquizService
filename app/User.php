@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -33,5 +34,9 @@ class User extends Authenticatable
         $this->save();
 
         return $this->api_token;
+    }
+
+    public function fragebogens(){
+        return $this->hasMany('App\Fragebogen');
     }
 }

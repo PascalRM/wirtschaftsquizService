@@ -6,6 +6,7 @@ use App\Frage;
 use Illuminate\Http\Request;
 use App\Kategorie;
 use App\Fragebogen;
+use App\User;
 
 class KategorieController extends Controller
 {
@@ -43,7 +44,8 @@ class KategorieController extends Controller
     public function getfragebogen(Request $request, $id){
         //$data = Fragebogen::where('id_kategorie',$id)->get();
         //$data = DB::table('fragebogens')->join('public.users', 'public.users.id', '=', 'public.fragebogens.id_user')>select('public.users.name', 'public.fragebogens.*')->get();
-        $data = Fragebogen::join('users', 'fragebogens.id_user', '=', 'users.id_user')->where('fragebogens.id_kategorie',$id)->select('users.name', 'fragebogens.*')->get();
+        $data = Fragebogen::find($id);
+        $data = $data->fragebogens()->get();
         return $data;
     }
 }
