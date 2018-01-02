@@ -89,13 +89,13 @@ Route::group(['middleware' => 'auth:api'], function() {
  * Multiplechoice
  *--------------------------------------------------------------------------
  */
-Route::get('multiplechoice', 'Multiplechoice@index');
-Route::get('multiplechoice/{id}', 'Multiplechoice@show');
+Route::get('multiplechoice', 'MultiplechoiceController@index');
+Route::get('multiplechoice/{id}', 'MultiplechoiceController@show');
 
 Route::group(['middleware' => 'auth:api'], function() {
-    Route::post('multiplechoice', 'Multiplechoice@store');
-    Route::put('multiplechoice/{id}', 'Multiplechoice@update');
-    Route::delete('multiplechoice/{id}', 'Multiplechoice@delete');
+    Route::post('multiplechoice', 'MultiplechoiceController@store');
+    Route::put('multiplechoice/{id}', 'MultiplechoiceController@update');
+    Route::delete('multiplechoice/{id}', 'MultiplechoiceController@delete');
 });
 /*
  *--------------------------------------------------------------------------
