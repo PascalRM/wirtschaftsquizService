@@ -40,7 +40,7 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::delete('kategorie/{id}', 'KategorieController@delete');
 });
 
-Route::get('kategorie_fragebogen', 'KategorieController@getfragebogen');
+Route::get('kategorie_fragebogen/{id}', 'KategorieController@getfragebogen');
 
 /*
  *--------------------------------------------------------------------------
