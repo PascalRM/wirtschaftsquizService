@@ -9,7 +9,7 @@ class UserInfoController extends Controller
 {
     public function show($id)
     {
-        $data = User::find($id)->lists(
+        $data = User::where('id',$id)->lists(
             'id',
             'name',
             'email'
