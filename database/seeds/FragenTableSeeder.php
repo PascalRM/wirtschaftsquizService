@@ -17,11 +17,13 @@ class FragenTableSeeder extends Seeder
      */
     public function run()
     {
-        Fragebogen::create([
-            'name' => 'Fragebogen1',
-            'id_kategorie' => 1,
-            'id_user' => 1,
-        ]);
+        for($i = 0; $i<5; $i++){
+            Fragebogen::create([
+                'name' => 'Fragebogen'.$i,
+                'id_kategorie' => $i,
+                'id_user' => $i,
+            ]);
+        }
 
 
         for($i = 0; $i<5; $i++){
