@@ -42,9 +42,9 @@ class KategorieController extends Controller
 
     public function getfragebogen(Request $request, $id){
         //$data = Fragebogen::where('id_kategorie',$id)->get();
-        $data = DB::table('fragebogens')
-            ->join('users', 'users.id', '=', 'fragebogens.id_user')
-            ->select('users.name', 'fragebogens.*')
+        $data = DB::table('public.fragebogens')
+            ->join('public.users', 'public.users.id', '=', 'public.fragebogens.id_user')
+            ->select('public.users.name', 'public.fragebogens.*')
             ->get();
         return $data;
     }
