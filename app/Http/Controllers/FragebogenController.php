@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Fragebogen;
 
-class hero extends Controller
+class FragebogenController extends Controller
 {
     public function index()
     {
