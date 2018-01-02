@@ -76,39 +76,39 @@ Route::group(['middleware' => 'auth:api'], function() {
  * Eingabe
  *--------------------------------------------------------------------------
  */
-Route::get('eingabe', 'FrageController@index');
-Route::get('eingabe/{id}', 'FrageController@show');
+Route::get('eingabe', 'EingabeController@index');
+Route::get('eingabe/{id}', 'EingabeController@show');
 
 Route::group(['middleware' => 'auth:api'], function() {
-    Route::post('eingabe', 'FrageController@store');
-    Route::put('eingabe/{id}', 'FrageController@update');
-    Route::delete('eingabe/{id}', 'FrageController@delete');
+    Route::post('eingabe', 'EingabeController@store');
+    Route::put('eingabe/{id}', 'EingabeController@update');
+    Route::delete('eingabe/{id}', 'EingabeController@delete');
 });
 /*
  *--------------------------------------------------------------------------
  * Multiplechoice
  *--------------------------------------------------------------------------
  */
-Route::get('multiplechoice', 'FrageController@index');
-Route::get('multiplechoice/{id}', 'FrageController@show');
+Route::get('multiplechoice', 'Multiplechoice@index');
+Route::get('multiplechoice/{id}', 'Multiplechoice@show');
 
 Route::group(['middleware' => 'auth:api'], function() {
-    Route::post('multiplechoice', 'FrageController@store');
-    Route::put('multiplechoice/{id}', 'FrageController@update');
-    Route::delete('multiplechoice/{id}', 'FrageController@delete');
+    Route::post('multiplechoice', 'Multiplechoice@store');
+    Route::put('multiplechoice/{id}', 'Multiplechoice@update');
+    Route::delete('multiplechoice/{id}', 'Multiplechoice@delete');
 });
 /*
  *--------------------------------------------------------------------------
  * Truefalse
  *--------------------------------------------------------------------------
  */
-Route::get('truefalse', 'FrageController@index');
-Route::get('truefalse/{id}', 'FrageController@show');
+Route::get('truefalse', 'TruefalsController@index');
+Route::get('truefalse/{id}', 'TruefalsController@show');
 
 Route::group(['middleware' => 'auth:api'], function() {
-    Route::post('truefalse', 'FrageController@store');
-    Route::put('truefalse/{id}', 'FrageController@update');
-    Route::delete('truefalse/{id}', 'FrageController@delete');
+    Route::post('truefalse', 'TruefalsController@store');
+    Route::put('truefalse/{id}', 'TruefalsController@update');
+    Route::delete('truefalse/{id}', 'TruefalsController@delete');
 });
 /*
  *--------------------------------------------------------------------------
