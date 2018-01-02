@@ -49,6 +49,7 @@ Route::group(['middleware' => 'auth:api'], function() {
  */
 Route::get('fragebogen', 'FragebogenController@index');
 Route::get('fragebogen/{id}', 'FragebogenController@show');
+Route::get('fragebogen_frage/{id}', 'FragebogenController@getfragen');
 
 Route::group(['middleware' => 'auth:api'], function() {
     Route::post('fragebogen', 'FragebogenController@store');
