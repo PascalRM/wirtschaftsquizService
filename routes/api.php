@@ -33,6 +33,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('kategorie', 'KategorieController@index');
 Route::get('kategorie/{id}', 'KategorieController@show');
+Route::get('kategorie_fragebogen/{id}', 'KategorieController@getfragebogen');
 
 Route::group(['middleware' => 'auth:api'], function() {
     Route::post('kategorie', 'KategorieController@store');
@@ -40,7 +41,6 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::delete('kategorie/{id}', 'KategorieController@delete');
 });
 
-Route::get('kategorie_fragebogen/{id}', 'KategorieController@getfragebogen');
 
 /*
  *--------------------------------------------------------------------------
@@ -111,10 +111,11 @@ Route::group(['middleware' => 'auth:api'], function() {
 });
 /*
  *--------------------------------------------------------------------------
- * Authentifizierung
+ * Authentifizierung / User
  *--------------------------------------------------------------------------
  */
 
+Route::get('userinfo/{id}', 'UserInfoController@show');
 
 Route::group(['middleware' => 'cors'], function() {
     Route::post('register', 'Auth\RegisterController@register');
