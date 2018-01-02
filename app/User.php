@@ -36,7 +36,4 @@ class User extends Authenticatable
         return $this->api_token;
     }
 
-    public function fragebogens(){
-        return $this->hasMany('App\Fragebogen');
-    }
 }
