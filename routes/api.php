@@ -35,12 +35,13 @@ Route::get('kategorie', 'KategorieController@index');
 Route::get('kategorie/{id}', 'KategorieController@show');
 
 Route::group(['middleware' => 'auth:api'], function() {
-    Route::get('kategorie', 'KategorieController@index');
+    Route::post('kategorie', 'KategorieController@store');
     Route::put('kategorie/{id}', 'KategorieController@update');
     Route::delete('kategorie/{id}', 'KategorieController@delete');
 });
 
 Route::get('kategorie_fragebogen', 'KategorieController@getfragebogen');
+
 /*
  *--------------------------------------------------------------------------
  * Fragebogen
