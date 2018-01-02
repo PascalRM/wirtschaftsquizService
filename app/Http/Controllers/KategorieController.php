@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Kategorie;
+use APP\Fragebogen;
 
 class KategorieController extends Controller
 {
@@ -36,5 +37,9 @@ class KategorieController extends Controller
         $kategorie->delete();
 
         return 204;
+    }
+
+    public function getfragebogen(Request $request, $id){
+        return DB::table('fragebogens')->where('id_kategorie',$id);
     }
 }
