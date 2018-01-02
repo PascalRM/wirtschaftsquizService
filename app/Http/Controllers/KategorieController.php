@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Frage;
 use Illuminate\Http\Request;
 use App\Kategorie;
-use APP\Fragebogen;
+use App\Fragebogen;
 
 class KategorieController extends Controller
 {
@@ -42,6 +42,6 @@ class KategorieController extends Controller
 
     public function getfragebogen(Request $request, $id){
         $data = DB::table('fragebogens')->where('id_kategorie',$id)->get();
-        return Fragebogen::where('id_kategorie',1);
+        return Fragebogen::where('id_kategorie',1)->get();
     }
 }
