@@ -9,11 +9,11 @@ class UserInfoController extends Controller
 {
     public function show($id)
     {
-        $data = DB::table('users')->where('id',$id)->lists(
+        $data = User::find($id)->lists(
             'id',
             'name',
             'email'
-        );
+        )->toArray();
 
         return $data;
     }
