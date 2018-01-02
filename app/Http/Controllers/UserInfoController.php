@@ -9,11 +9,13 @@ class UserInfoController extends Controller
 {
     public function show($id)
     {
-        return User::find($id)->get(array(
+        $data = User::find($id)->get(array(
             id,
             name,
             email,
         ));
+
+        return $data;
     }
 
 }
