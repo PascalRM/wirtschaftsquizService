@@ -119,7 +119,7 @@ Route::group(['middleware' => 'auth:api'], function() {
 Route::get('userinfo/{id}', 'UserInfoController@show');
 
 Route::group(['middleware' => 'cors'], function() {
-    Route::post('register', 'Auth\RegisterController@register');
+    Route::post('registrieren', 'Auth\RegisterController@register');
     Route::post('login', 'Auth\LoginController@login');
     Route::post('logout', 'Auth\LoginController@logout');
 });
