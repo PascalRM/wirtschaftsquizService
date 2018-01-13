@@ -10,8 +10,6 @@ class UserInfoController extends Controller
     public function show($email)
     {
         $data = User::where('email',$email)->select(
-            'id',
-            'name',
             'email'
         )->get();
 
