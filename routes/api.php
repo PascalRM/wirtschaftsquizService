@@ -116,7 +116,7 @@ Route::group(['middleware' => 'auth:api'], function() {
  *--------------------------------------------------------------------------
  */
 
-Route::get('userinfo/{id}', 'UserInfoController@show');
+Route::get('userinfo/{email}', 'UserInfoController@show');
 
 Route::group(['middleware' => 'cors'], function() {
     Route::post('registrieren', 'Auth\RegisterController@register');

@@ -7,9 +7,9 @@ use App\User;
 
 class UserInfoController extends Controller
 {
-    public function show($id)
+    public function show($email)
     {
-        $data = User::where('id',$id)->select(
+        $data = User::where('email',$email)->select(
             'id',
             'name',
             'email'
